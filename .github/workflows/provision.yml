@@ -17,6 +17,9 @@ jobs:
     steps:
       - name: Check Python Version
         run: python --version
+
+      - name: Check AWS CLI Version
+        run: aws --version
         
       - name: Checkout Code
         uses: actions/checkout@v3
