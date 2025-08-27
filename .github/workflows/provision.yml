@@ -15,6 +15,9 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     steps:
+      - name: Check Python Version
+        run: python --version
+        
       - name: Checkout Code
         uses: actions/checkout@v3
 
