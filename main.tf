@@ -12,3 +12,12 @@ resource "aws_instance" "example" {
     Name = "GitHubActionsInstance-test-${count.index + 1}" 
   }
 }
+output "instance_ids" {
+  value = aws_instance.example.*.id
+  description = "The IDs of the created EC2 instances"
+}
+
+output "public_ips" {
+  value = aws_instance.example.*.public_ip
+  description = "The public IPs of the created EC2 instances"
+}
