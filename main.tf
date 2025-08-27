@@ -9,7 +9,7 @@ resource "aws_instance" "example" {
   key_name      = "Ansible-master-mayuri"
 
   tags = {
-    Name = "GitHubActionsInstance-test-${count.index + 1}" 
+    Name = "GitHubActionsInstance-${count.index + 1}" 
   }
 }
 output "instance_ids" {
