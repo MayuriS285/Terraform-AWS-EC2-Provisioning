@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "example" {
-  count         = 2 
+  count         = 3
   ami           = "ami-00ca32bbc84273381" 
   instance_type = "t2.micro"   
   key_name      = "Ansible-master-mayuri"
